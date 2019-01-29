@@ -2,6 +2,7 @@ package com.ladyishenlong.zone_android_app.business.main;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 
 import com.ladyishenlong.zone_android_app.R;
@@ -16,6 +17,7 @@ public class MainActivity extends BaseActivity {
 
 
 
+
     private String[] tabTitle = {"首页", "设置"};
 
     @Override
@@ -23,6 +25,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
     }
+
 
 
 
