@@ -1,10 +1,9 @@
 package com.ladyishenlong.zone_android_app.business.main;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.view.LayoutInflater;
-import android.widget.FrameLayout;
+import android.support.v4.view.ViewPager;
 
+import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ladyishenlong.zone_android_app.R;
 import com.ladyishenlong.zone_android_app.center.annotation.Layout;
 import com.ladyishenlong.zone_android_app.center.base.BaseActivity;
@@ -15,7 +14,10 @@ import butterknife.BindView;
 public class MainActivity extends BaseActivity {
 
 
-
+    @BindView(R.id.viewPager)
+    ViewPager viewPager;
+    @BindView(R.id.bottom_navigation_bar)
+    BottomNavigationBar bottomNavigationBar;
 
 
     private String[] tabTitle = {"首页", "设置"};
@@ -25,11 +27,6 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
     }
-
-
-
-
-
 
 
 }

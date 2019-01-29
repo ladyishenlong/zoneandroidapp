@@ -35,7 +35,7 @@ public class TestActivity extends BaseActivity {
     @OnClick(R.id.btn)
     public void onViewClicked() {
 //        AppConfig.INSTANCE.setTheme(0);
-        recreate();
+        recreate();//刷新布局
     }
 
 
