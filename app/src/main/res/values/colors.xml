@@ -7,14 +7,11 @@
 
 
 
+    <color name="dreamWhite">#1affffff</color>
+    <color name="dreamBlack">#33000000</color>
 
 
 
 
-
-
-    <!--颜色跟随主题-->
-    <attr name="clockBackground" format="color" />
-    <attr name="clockTextColor" format="color" />
 
 </resources>

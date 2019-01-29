@@ -3,7 +3,7 @@ package com.ladyishenlong.zone_android_app.test;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.ladyishenlong.zone_android_app.center.BaseActivity;
+import com.ladyishenlong.zone_android_app.center.base.BaseActivity;
 import com.ladyishenlong.zone_android_app.R;
 
 import butterknife.BindView;

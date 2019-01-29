@@ -15,20 +15,27 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="clockBackground">@android:color/white</item>
-        <item name="clockTextColor">@android:color/black</item>
+        <item name="bg">@android:color/white</item>
+        <item name="textColor">@android:color/black</item>
 
     </style>
 
 
-    <!--梦幻主题-->
+    <!--dream主题-->
     <style name="DreamTheme" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="clockBackground">@android:color/black</item>
-        <item name="clockTextColor">@android:color/holo_blue_bright</item>
+        <item name="bg">@android:color/darker_gray</item>
+        <item name="textColor">@android:color/white</item>
     </style>
+
+
+
+
+    <!--颜色跟随主题-->
+    <attr name="bg" format="color" />
+    <attr name="textColor" format="color" />
 
 
 </resources>

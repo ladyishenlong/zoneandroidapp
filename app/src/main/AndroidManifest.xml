@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ladyishenlong.zone_android_app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
         android:name=".center.App"
         android:allowBackup="true"
@@ -11,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/DreamTheme">
         <activity android:name=".test.TestActivity"></activity>
-        <activity android:name=".center.BaseActivity" />
-        <activity android:name=".business.MainActivity">
+        <activity android:name=".center.base.BaseActivity" />
+        <activity android:name=".business.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
