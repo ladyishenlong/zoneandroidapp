@@ -30,7 +30,6 @@ public class BaseActivity extends AppCompatActivity {
         ActivityUtils.INSTANCE.add(this);
         ThemeConfig.INSTANCE.setTheme(this);//设置主题风格
         setContentView(R.layout.avtivity_base);//布局加载
-        ImmersionBar.with(this).init();//沉浸式导航栏
         layoutBase = findViewById(R.id.layout_base);
         imgBaseBg = findViewById(R.id.img_baseBg);
         initAnnotation();
@@ -39,6 +38,9 @@ public class BaseActivity extends AppCompatActivity {
         setTheme();//主题设置
     }
 
+    /**
+     * 注解解释
+     */
     private void initAnnotation() {
         Class<?> clazz = this.getClass();
         if (clazz.getAnnotations() != null) {
@@ -55,10 +57,15 @@ public class BaseActivity extends AppCompatActivity {
     private void setTheme() {
         switch (ThemeConfig.INSTANCE.getTheme()) {
             case ThemeConfig.WhiteDreamTheme:
-                GlideUtils.INSTANCE.setBaseBg(this,imgBaseBg);
+                imgBaseBg.setVisibility(View.VISIBLE);
+                GlideUtils.INSTANCE.setBaseBg(this, imgBaseBg);
                 break;
             case ThemeConfig.lightTheme:
-                imgBaseBg.setVisibility(View.GONE);
+                ImmersionBar.with(this)
+                        .statusBarDarkFont(true)//状态栏字体是深色，不写默认为亮色
+                        .init();
+                break;
+            default:
                 break;
         }
     }

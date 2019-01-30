@@ -8,7 +8,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="bg">@android:color/white</item>
+        <item name="bgColor">@android:color/white</item>
+        <item name="textColor">@android:color/black</item>
+
+    </style>
+
+    <!--白天主题-->
+    <style name="DarkTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="bgColor">@android:color/white</item>
         <item name="textColor">@android:color/black</item>
 
     </style>
@@ -19,14 +29,14 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="bg">@android:color/darker_gray</item>
+        <item name="bgColor">@android:color/darker_gray</item>
         <item name="textColor">@android:color/white</item>
     </style>
 
 
 
     <!--颜色跟随主题-->
-    <attr name="bg" format="color" />
+    <attr name="bgColor" format="color" />
     <attr name="textColor" format="color" />
 
 

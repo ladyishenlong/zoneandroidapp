@@ -8,15 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ladyishenlong.zone_android_app.R;
+import com.ladyishenlong.zone_android_app.center.annotation.Layout;
 import com.ladyishenlong.zone_android_app.center.base.BaseFragment;
 
+@Layout(R.layout.page_set)
 public class SetPage extends BaseFragment {
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.page_set, container, false);
-        return view;
+    @Override
+    protected void onViewCreated(@Nullable Bundle savedInstanceState) {
+
     }
 }

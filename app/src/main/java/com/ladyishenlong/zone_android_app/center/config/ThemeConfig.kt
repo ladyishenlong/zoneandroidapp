@@ -8,14 +8,16 @@ object ThemeConfig {
 
     const val WhiteDreamTheme = 0
     const val lightTheme = 1
+    const val darkTheme = 2
 
-    var theme = 0
+    var theme = 1 //默认theme
 
 
     fun setTheme(baseActivity: BaseActivity) {
         when (theme) {
             WhiteDreamTheme -> baseActivity.setTheme(R.style.WhiteDreamTheme)
             lightTheme -> baseActivity.setTheme(R.style.LightTheme)
+            darkTheme->baseActivity.setTheme(R.style.DarkTheme)
         }
     }
 
@@ -24,8 +26,6 @@ object ThemeConfig {
         this.theme = theme
         baseActivity.recreate()
     }
-
-
 
 
 }

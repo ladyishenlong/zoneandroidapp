@@ -7,11 +7,13 @@
     android:orientation="vertical"
     tools:context=".business.main.MainActivity">
 
-    <android.support.v4.view.ViewPager
+
+    <com.ladyishenlong.zone_android_app.center.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNavigationViewEx"/>
+        android:layout_height="match_parent">
+
+    </com.ladyishenlong.zone_android_app.center.view.ViewPager>
 
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/bottomNavigationViewEx"
