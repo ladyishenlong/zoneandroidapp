@@ -36,14 +36,18 @@ public class HomePage extends BaseFragment {
         smartRefreshLayout.setRefreshHeader(new ClassicsHeader(context));//设置Header
         smartRefreshLayout.setRefreshFooter(new ClassicsFooter(context));//设置Footer
 
+        smartRefreshLayout.setFooterTriggerRate(1);//触发加载距离 与 FooterHeight 的比率1.0.4
+        smartRefreshLayout.setFooterMaxDragRate(2);//最大显示下拉高度/Footer标准高度
+
+        smartRefreshLayout.setFooterHeight(150);//Footer标准高度（显示上拉高度>=标准高度 触发加载）
+        smartRefreshLayout.setEnableFooterFollowWhenNoMoreData(true);//是否在全部加载结束之后Footer跟随内容1.0.4
+
         smartRefreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-
-
+                smartRefreshLayout.finishLoadMoreWithNoMoreData();
             }
         });
-//        Blurry.with(context).radius(25).sampling(2).onto(smartRefreshLayout);
 
 
     }
