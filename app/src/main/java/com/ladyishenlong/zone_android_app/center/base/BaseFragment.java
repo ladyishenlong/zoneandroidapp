@@ -20,7 +20,6 @@ public abstract class BaseFragment extends Fragment {
     Unbinder unbinder;
 
     private int layoutId;
-    protected BaseActivity activity;
     protected Context context;
 
     @Override
@@ -31,8 +30,7 @@ public abstract class BaseFragment extends Fragment {
             if (clazz.isAnnotationPresent(Layout.class)) {
                 Layout layout = clazz.getAnnotation(Layout.class);
                 layoutId = layout.value();
-                activity = (BaseActivity) getActivity();
-                context = getContext();
+                context=getContext();
             }
         }
     }
