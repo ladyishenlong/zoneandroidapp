@@ -13,7 +13,7 @@ object GlideUtils {
 
         Glide.with(context)
                 .load(R.mipmap.bg_yuji)
-                .bitmapTransform(BlurTransformation(context, 24))
+//                .bitmapTransform(BlurTransformation(context, 24))
                 .into(imageView)
     }
 

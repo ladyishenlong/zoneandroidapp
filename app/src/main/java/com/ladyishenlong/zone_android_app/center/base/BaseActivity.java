@@ -54,12 +54,11 @@ public class BaseActivity extends AppCompatActivity {
 
     private void setTheme() {
         switch (ThemeConfig.INSTANCE.getTheme()) {
-            case ThemeConfig.dreamTheme:
-
+            case ThemeConfig.WhiteDreamTheme:
                 GlideUtils.INSTANCE.setBaseBg(this,imgBaseBg);
                 break;
             case ThemeConfig.lightTheme:
-                //TODO 普通模式暂时不搞
+                imgBaseBg.setVisibility(View.GONE);
                 break;
         }
     }

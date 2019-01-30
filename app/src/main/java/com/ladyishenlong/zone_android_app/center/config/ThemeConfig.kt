@@ -6,7 +6,7 @@ import com.ladyishenlong.zone_android_app.center.base.BaseActivity
 object ThemeConfig {
 
 
-    const val dreamTheme = 0
+    const val WhiteDreamTheme = 0
     const val lightTheme = 1
 
     var theme = 0
@@ -14,7 +14,7 @@ object ThemeConfig {
 
     fun setTheme(baseActivity: BaseActivity) {
         when (theme) {
-            dreamTheme -> baseActivity.setTheme(R.style.DreamTheme)
+            WhiteDreamTheme -> baseActivity.setTheme(R.style.WhiteDreamTheme)
             lightTheme -> baseActivity.setTheme(R.style.LightTheme)
         }
     }
