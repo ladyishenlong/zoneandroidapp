@@ -1,5 +1,6 @@
 package com.ladyishenlong.zone_android_app.center.base;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,6 +20,8 @@ public abstract class BaseFragment extends Fragment {
     Unbinder unbinder;
 
     private int layoutId;
+    protected BaseActivity activity;
+    protected Context context;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,8 +29,10 @@ public abstract class BaseFragment extends Fragment {
         Class<?> clazz = this.getClass();
         if (clazz.getAnnotations() != null) {
             if (clazz.isAnnotationPresent(Layout.class)) {
-                Layout layout =clazz.getAnnotation(Layout.class);
-                layoutId=layout.value();
+                Layout layout = clazz.getAnnotation(Layout.class);
+                layoutId = layout.value();
+                activity = (BaseActivity) getActivity();
+                context = getContext();
             }
         }
     }
@@ -51,13 +56,11 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void onViewCreated(@Nullable Bundle savedInstanceState);
 
 
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
     }
-
 
 
 }

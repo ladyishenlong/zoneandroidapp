@@ -11,17 +11,41 @@
     <com.ladyishenlong.zone_android_app.center.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_fill">
 
     </com.ladyishenlong.zone_android_app.center.view.ViewPager>
 
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-        android:id="@+id/bottomNavigationViewEx"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/main_bottom">
 
-    </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+
+    <eightbitlab.com.blurview.BlurView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Any child View here, TabLayout for example-->
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/bottomNavigationViewEx"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottomBarHeight"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/main_bottom">
+
+        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
+
+
+    </eightbitlab.com.blurview.BlurView>
+
+
+
+    <View
+        android:id="@+id/view_fill"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottomBarHeight"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
 
 </RelativeLayout>
