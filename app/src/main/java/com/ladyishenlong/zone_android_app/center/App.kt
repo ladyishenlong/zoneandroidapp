@@ -6,7 +6,8 @@ import android.util.AttributeSet
 import com.apkfuns.logutils.LogUtils
 import com.ladyishenlong.zone_android_app.center.config.AppConfig
 
-class App :Application() {
+class App : Application() {
+
 
 
     override fun onCreate() {
@@ -15,8 +16,6 @@ class App :Application() {
         LogUtils.configAllowLog = !AppConfig.isRelease
         LogUtils.configTagPrefix = "LogUtils"
     }
-
-
 
 
 }

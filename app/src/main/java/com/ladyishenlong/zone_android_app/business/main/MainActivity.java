@@ -32,12 +32,11 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        BlurUtils.INSTANCE.set(this,blurView);
+        BlurUtils.INSTANCE.set(this, blurView);
 
         mainPageAdapter = new MainPageAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mainPageAdapter);
         viewPager.setOffscreenPageLimit(4);//加载页数限制
-        viewPager.setCanSlide(false);//TODO 禁止左右滑动，还有bug
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
@@ -56,12 +55,10 @@ public class MainActivity extends BaseActivity {
         });
         bottomNavigationViewEx.setBackgroundColor(getColor(R.color.transparent));
         bottomNavigationViewEx.setOnNavigationItemSelectedListener(menuItem -> {
+            viewPager.setCanSlide(true);
             viewPager.setCurrentItem(menuItem.getOrder(), false);
+            viewPager.setCanSlide(false);
             return true;
         });
-
     }
-
-
-
 }

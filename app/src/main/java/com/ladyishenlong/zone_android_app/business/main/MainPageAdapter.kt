@@ -13,7 +13,6 @@ import java.util.ArrayList
 class MainPageAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
 
 
-
     private val fragmentList = ArrayList<Fragment>()
 
     init {
@@ -25,7 +24,6 @@ class MainPageAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(f
     override fun getItem(p0: Int): Fragment = fragmentList[p0]
 
     override fun getCount(): Int = fragmentList.size
-
 
 
 }
