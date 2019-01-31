@@ -10,6 +10,13 @@
     <color name="dreamWhite">#40ffffff</color>
     <color name="dreamBlack">#33000000</color>
 
+
+    <!--高斯模糊白色-->
+    <color name="blurWhite">#40ffffff</color>
+    <!--高斯模糊黑色-->
+    <color name="blurBlack">#33000000</color>
+
+
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>

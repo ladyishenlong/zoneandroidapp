@@ -10,6 +10,12 @@
         android:id="@+id/smartRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+
         <!--支持嵌套滑动-->
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -20,6 +26,13 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!--增加一行空白防止遮蔽这个防止-->
+                <TextView
+                    android:gravity="center"
+                    android:text="加载中"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
 
                 <TextView
                     android:layout_margin="10dp"
@@ -64,8 +77,21 @@
                     android:background="@color/colorPrimary"
                     android:gravity="center"
                     android:text="搞事情" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="加载中"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 

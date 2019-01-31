@@ -3,24 +3,34 @@
 
 
 
+    <!--大背景背景颜色-->
+    <attr name="bgColor" format="color" />
+    <!--文字颜色-->
+    <attr name="textColor" format="color" />
+    <!--高斯模糊渲染色-->
+    <attr name="blurColor" format="color" />
+
+
+
     <!--白天主题-->
     <style name="LightTheme" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="bgColor">@android:color/white</item>
+        <item name="bgColor">@color/lightBg</item>
         <item name="textColor">@android:color/black</item>
+        <item name="blurColor">@color/blurWhite</item>
 
     </style>
 
-    <!--白天主题-->
+    <!--黑夜主题-->
     <style name="DarkTheme" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="bgColor">@android:color/white</item>
-        <item name="textColor">@android:color/black</item>
-
+        <item name="bgColor">@android:color/black</item>
+        <item name="textColor">@android:color/white</item>
+        <item name="blurColor">@color/blurBlack</item>
     </style>
 
 
@@ -35,9 +45,6 @@
 
 
 
-    <!--颜色跟随主题-->
-    <attr name="bgColor" format="color" />
-    <attr name="textColor" format="color" />
 
 
 
