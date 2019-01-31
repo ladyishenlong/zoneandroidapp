@@ -14,14 +14,20 @@ class ViewPager : ViewPager {
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
 
 
-    var isCanSlide = true
+    var isCanSlide = false
 
     override fun onTouchEvent(ev: MotionEvent?): Boolean {
-        return isCanSlide && super.onTouchEvent(ev)
+        if(isCanSlide)return super.onTouchEvent(ev)else return false
     }
 
     override fun onInterceptHoverEvent(event: MotionEvent?): Boolean {
-        return isCanSlide && super.onInterceptHoverEvent(event)
+
+        if(isCanSlide)return super.onInterceptHoverEvent(event)else return false
+
+    }
+
+    override fun scrollTo(x: Int, y: Int) {
+        if(isCanSlide) super.scrollTo(x, y)
     }
 
 }

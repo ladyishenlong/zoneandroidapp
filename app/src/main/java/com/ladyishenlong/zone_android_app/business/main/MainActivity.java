@@ -33,6 +33,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         BlurUtils.INSTANCE.set(this,blurView);
+
         mainPageAdapter = new MainPageAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mainPageAdapter);
         viewPager.setOffscreenPageLimit(4);//加载页数限制
@@ -58,9 +59,6 @@ public class MainActivity extends BaseActivity {
             viewPager.setCurrentItem(menuItem.getOrder(), false);
             return true;
         });
-
-
-
 
     }
 
