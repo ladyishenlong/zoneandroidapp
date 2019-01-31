@@ -27,9 +27,6 @@ class HomeTitleBar : BlurView {
     override fun onFinishInflate() {
         super.onFinishInflate()
         layoutBlurView = findViewById<BlurView>(R.id.layout_blurView)
-
-
-
     }
 
 
